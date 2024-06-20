@@ -1,0 +1,22 @@
+﻿@model Category
+@{
+    ViewData["Title"] = "Index";
+}
+<h1>@Model.Name</h1>
+
+<div class="row">
+    @foreach(var item in Model.Products)
+    {
+        <div class="col-lg-6">
+       <div class="card mb-4">
+         <a href="#!"><img class="card-img-top" src="/ProductImages/@item.Image" alt ="" /></a>
+                <div class="card-body">
+                    <div class="small text-muted">@item.Price ₺</div>
+             <h2 class="card-title h4">@item.Name</h2>
+             <p class="=card-text">@item.Description</p>
+             <a class="btn btn-primary" href="#!">İncele</a>
+             </div>
+       </div>
+       </div>
+    }
+</div>
