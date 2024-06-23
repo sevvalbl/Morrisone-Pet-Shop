@@ -15,18 +15,24 @@ namespace Morrisone_Pet_Shop.Controllers
             _logger = logger;
             _context = context; 
         }
-
+        public IActionResult UserViewCategories()
+        {
+            return View();
+        }
         public IActionResult Index()
         {
             return View();
         }
-
-        public IActionResult Privacy()
+        public IActionResult Copyright()
         {
             return View();
         }
 
-       
+
+
+
+
+
 
 
         // GET: Admin/Products

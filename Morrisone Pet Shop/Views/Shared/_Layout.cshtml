@@ -3,7 +3,7 @@
 <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>@ViewData["Title"] - Morrisone_Pet_Shop</title>
+    <title>Morrisone Pet Shop</title>
     <link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.min.css" />
     <link rel="stylesheet" href="~/css/site.css" asp-append-version="true" />
     <link rel="stylesheet" href="~/Morrisone_Pet_Shop.styles.css" asp-append-version="true" />
@@ -26,16 +26,17 @@
                             <img href="/ProjectImages/Beige Black Simple Pet Shop Logo (2).png" asp-area="" asp-controller="Home" asp-action="Index" />
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link text-dark" asp-area="" asp-controller="Home" asp-action="Index">Home</a>
+                            <a class="nav-link text-dark" asp-area="" asp-controller="Home" asp-action="Index">Anasayfa</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link text-dark" asp-area="" asp-controller="Home" asp-action="Privacy">Privacy</a>
+                            <a class="nav-link text-dark" asp-area="" asp-controller="Home" asp-action="UserViewCategories">Kategoriler</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link text-dark" asp-area="" asp-controller="Home" asp-action="UserViewProduct">Ürünlerimiz</a>
+                            <a class="nav-link text-dark" asp-area="" asp-controller="Home" asp-action="UserViewProduct">Ürünler</a>
                         </li>
+                        
                         <li class="nav-item">
-                            <a class="nav-link text-dark" asp-area="Admin" asp-controller="Products" asp-action="Index">Admin</a>
+                            <a class="nav-link text-dark" asp-area="" asp-controller="Home" asp-action="Copyright">Gizlilik</a>
                         </li>
                     </ul>
                 </div>
@@ -48,15 +49,20 @@
             @RenderBody()
         </main>
     </div>
-
     <footer class="border-top footer text-muted">
-        <div class="container">
-            &copy; 2024 - Morrisone_Pet_Shop - <a asp-area="" asp-controller="Home" asp-action="Privacy">Privacy</a>
+        <div class="containerfooter">
+            <img src="/ProjectImages/Beige Black Simple Pet Shop Logo (2).png" width="100" />
+
+            Copyright © Morrisone Pet Shop 2024. Tüm Hakları Saklıdır. <a asp-area="" asp-controller="Home" asp-action="Copyright">Gizlilik</a>
+
+
         </div>
     </footer>
+    
     <script src="~/lib/jquery/dist/jquery.min.js"></script>
     <script src="~/lib/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
     <script src="~/js/site.js" asp-append-version="true"></script>
     @await RenderSectionAsync("Scripts", required: false)
 </body>
+
 </html>
